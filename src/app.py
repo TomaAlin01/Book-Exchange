@@ -16,15 +16,15 @@ app.config['MAIL_DEFAULT_SENDER'] = ''
 mail = Mail(app)
 
 def send_email_with_mailgun(recipient, subject, body):
-    mailgun_api_key='0d1b20624c6fac67d9b93098ab401a9b-4c955d28-f49c966f'
-    mailgun_domain='sandbox37bbf82317b0452fa1140bf19fbc97c6.mailgun.org'
+    mailgun_api_key=''
+    mailgun_domain=''
 
     app.config['MAIL_SERVER'] = 'smtp.mailgun.org'
     app.config['MAIL_PORT'] = 587
     app.config['MAIL_USE_TLS'] = True
     app.config['MAIL_USERNAME'] = 'postmaster@' + mailgun_domain
     app.config['MAIL_PASSWORD'] = mailgun_api_key
-    app.config['MAIL_DEFAULT_SENDER'] = 'book-exchange-pi@outlook.com'
+    app.config['MAIL_DEFAULT_SENDER'] = ''
 
     mail.init_app(app)
 
